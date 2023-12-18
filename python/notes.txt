@@ -1,0 +1,22 @@
+= Precision of float numbers:
+1. '%.6f' % number
+2. {:.6f}.format( number )
+3. round(number, 6)         # this method wont keep decimals which are 0s
+
+= Translate between ASCII integer and char:
+ascii = ord(char)
+char = chr(ascii)
+
+= Built-in functions for checking if is alphabet:
+char.isalpha()
+char.islower()
+char.isupper()
+
+= Reverse a string:
+1. string[::-1]
+2. ''.join(reversed(string))
+
+= Extract columns from matrix
+for i in len(matrix[0]):
+    col = [ row[i] for row in matrix ]
+    cols.append(col)

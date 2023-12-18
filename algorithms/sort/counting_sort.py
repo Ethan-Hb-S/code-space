@@ -34,3 +34,19 @@ def counting_sort(arr):
         temp_arr[arr[i]] = temp_arr[arr[i]] - 1
 
     return result_arr
+
+def countingSort(arr):
+    upper = max(arr)
+    lower = min(arr)
+    d = {}
+    for i in arr:
+        if i not in d:
+            d[i] = 1
+            continue
+        d[i] += 1
+    
+    l = []
+    for i in range(upper - lower):
+        if i in d:
+            l += [i] * d[i]
+    return l
