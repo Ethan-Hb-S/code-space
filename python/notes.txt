@@ -20,3 +20,11 @@ char.isupper()
 for i in len(matrix[0]):
     col = [ row[i] for row in matrix ]
     cols.append(col)
+
+= Fastest data structure checking existance:
+set = Set([...])
+set = {...}
+
+= Value pairs:
+with order -> tuple ()
+without order -> frozenset()    # cant be changed, hashable
