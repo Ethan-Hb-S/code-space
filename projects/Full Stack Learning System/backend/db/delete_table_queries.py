@@ -1,0 +1,28 @@
+# Queries that allow tables to be dropped
+
+drop_queries = (
+    """drop domain if exists MarkRange cascade""",
+    """drop type if exists Duration cascade""",
+    """drop table if exists assessments cascade;""",
+    """drop table if exists asst_submissions cascade;""",
+    """drop table if exists courses cascade""",
+    """drop table if exists enrolled_in cascade;""",
+    """drop table if exists files cascade;""",
+    """drop table if exists gets_assessed cascade;""",
+    """drop table if exists lecturers cascade;""",
+    """drop table if exists messages cascade;""",
+    """drop table if exists questions cascade;""",
+    """drop table if exists students cascade;""",
+    """drop table if exists teaches cascade;""",
+    """drop table if exists users cascade;""",
+    """drop table if exists threads cascade;""",
+    """drop table if exists liked_by cascade;""",
+    """drop table if exists pinned_messages_by cascade;""",
+    """drop table if exists pinned_threads_by cascade;""",
+    """drop table if exists zoom_meetings cascade;""",
+    """drop table if exists zoom_per_class cascade;""",
+    """drop table if exists quizzes cascade;""",
+    """drop table if exists options cascade;""",
+    """drop table if exists answers cascade;""",
+    """drop table if exists quiz_marks cascade;""",
+)
