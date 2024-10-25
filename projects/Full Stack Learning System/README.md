@@ -1,4 +1,26 @@
+# Student Learning Management System
+## Introduction
+This is a full-stack cloud-based learning management system integrated complex functions, which enables users to create and manage their educations materials online including but not limited to courses, lecture streaming, forums and quizzes etc., or furtherly their personal accounts' content like avatars. It was developed on my last term in UNSW before my graduation.
+The details are as follows, as indicated in index.
 
+## Index
+ - [Introduction](#introduction)
+ - [Applied Users](#applied-users)
+ - [Features](#features)
+ - [Installation](#installation)
+
+## Applied Users
+Technically, the users can be students/lecturers, meanwhile there will be a system administrator if there doesn't exist one and admin can be multiple.
+They are listed below, based on their roles' permission to the system from high to low:
+    - administrator: all access and permissions to everything including user accounts
+    - lecturer: most of permissions and nearly all access to content such as creating assessment
+    - student: limited access and permissions, for example cannot see the certain content before its release date
+The majority of features are meant to be developed for students and lecturers, so descriptions below will be in their sight mostly.
+
+## Features
+
+
+## Installation
 ## Needed files
 In the backend directoy create a:
 - config.py
