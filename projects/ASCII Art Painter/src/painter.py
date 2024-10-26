@@ -1,5 +1,5 @@
 import sys, argparse
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
 # Character ramps below referred from Paul Bourke's <<Character representation of grey scale images>>
@@ -13,7 +13,7 @@ GSCALE_16 = "@%8#Z0oc?*+=:^'. "
 GSCALE_10 = "@%#*+=-:. "
 
 # default number of columns (equivalent to resolution)
-COL_DEFAULT = 1200
+COL_DEFAULT = 600
 
 # default width-height ratio of font as using Courier
 RATIO_DEFAULT = 0.43
@@ -21,6 +21,12 @@ RATIO_DEFAULT = 0.43
 # locate folder for testing
 DIR_TEST_IN = '../test/img/'
 DIR_TEST_OUT = '../test/output/'
+
+# total size of picture
+WIDTH, HEIGHT = 0, 0
+FONT_SIZE = 8
+CONSOLA_PATH_WIN = 'C:/Windows/Fonts/consola.ttf'
+COURIER_PATH_WIN = 'C:/Windows/Fonts/cour.ttf'
 
 def convertToASCII(filename, cols, ratio, moreLevels):
     '''
@@ -33,9 +39,18 @@ def convertToASCII(filename, cols, ratio, moreLevels):
     # w represents a single tile's unit width, h represents the its unit height
     w = width / cols
     h = w / ratio
+    '''
+    scale = width/height
+    h = w / (scale)
+    '''
     rows = int(height / h)
-    print(rows)
     res = []
+
+    '''
+    global WIDTH, HEIGHT
+    WIDTH, HEIGHT = int((cols+1)*(FONT_SIZE+1)*ratio), (rows+1)*(FONT_SIZE+1)
+    print(f'Generating picture size [ {WIDTH} * {HEIGHT} ]')
+    '''
 
     # set up vertical bounds for each tile
     for r in range(rows):
@@ -76,6 +91,13 @@ def changeSuffix(file:str, suffix:str):
     flist[-1] = suffix
     return '.'.join(flist)
 
+def drawPic(art:str, addr):
+    font = ImageFont.truetype(font='cour.ttf', size=FONT_SIZE)
+    img = Image.new('L', (WIDTH, HEIGHT), 255)
+    draw = ImageDraw.Draw(img)
+    draw.text((0,0), art, fill=0, font=font)
+    img.save(addr)
+
 def main():
     parser = argparse.ArgumentParser(description='Process image to ASCII graphics')
     parser.add_argument('-f', '--filename', type=str, required=True, help="Target file's name and location")
@@ -102,11 +124,17 @@ def main():
 
     addr = DIR_TEST_OUT if args.test else ''
     addr += outname
-    addr = changeSuffix(addr, 'txt')
 
+    '''
+    addr = changeSuffix(addr, 'jpg')
+    drawPic(res, addr)
+    '''
+    
+    addr = changeSuffix(addr, 'txt')
     outfile = open(addr, mode='w')
     outfile.write(res)
     outfile.close
+
     print('ASCII art completed on ->' + addr)
 
 if __name__ == '__main__':
