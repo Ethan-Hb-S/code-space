@@ -13,7 +13,7 @@ GSCALE_16 = "@%8#Z0oc?*+=:^'. "
 GSCALE_10 = "@%#*+=-:. "
 
 # default number of columns (equivalent to resolution)
-COL_DEFAULT = 600
+COL_DEFAULT = 400
 
 # default width-height ratio of font as using Courier
 RATIO_DEFAULT = 0.43
