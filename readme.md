@@ -9,7 +9,6 @@ Each of them represents my expertise in various areas, and I've included code ex
 
 - **Personal Website**: [cybergarden.click](URL)
 - **LinkedIn**: [LinkedIn URL]
-- **Email**: [vulomkiin@gmail.com](URL)
 <br><br>
 
 ## 📖 About
@@ -38,5 +37,7 @@ This repo showcases my skills in OO programming, algorithms & data stuctures, py
 ## 📞 Contact Me
 Feel free to reach out via phonecall or email for inquiries or further discussion.  
 Thank you for reviewing my repo! 😊  
+
+- **Email**: [vulomkiin@gmail.com](URL)
 
 <br><br>
