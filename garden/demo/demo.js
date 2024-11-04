@@ -1,3 +1,2 @@
-let x = 'fuck off'
-console.log(x);
-alert('No')
+
+alert('Thanks for your requesting!')

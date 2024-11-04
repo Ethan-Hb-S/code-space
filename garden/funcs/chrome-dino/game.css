@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'ps2p';
+	src: local('☺'), url('../../assets/css/fonts/PressStart2P-vaV7.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+:root {
+    --canvas-default-height: 150px;
+    --trex-config-width: 600px;
+    --arcade-mode-initial-top-position: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#chrome-dino {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#offline-resources {
+    display: none;
+}
+
+#reminder{
+    font-family: 'ps2p';
+    color: #fff;
+}
+
+#reminder ul {
+    font-size: 24px;
+    font-family: 'ps2p';
+    text-align: center;
+}
+
+body {
+    background-color: #333;
+    transition: filter 1.5s cubic-bezier(0.65, 0.05, 0.36, 1),
+                background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: filter, background-color;
+}
+
+.inverted {
+    filter: invert(100%);
+    background-color: #111;
+}
+
+.offline .runner-container {
+    background-color: #fff;
+    position: absolute;
+    top: var(--arcade-mode-initial-top-position);
+    width: var(--trex-config-width);
+    max-width: 600px;
+    height: var(--canvas-default-height);
+    overflow: hidden;
+}
+
+.offline .runner-canvas {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    height: 150px;
+    max-width: 600px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.arcade-mode,
+.arcade-mode .runner-container,
+.arcade-mode .runner-canvas {
+    image-rendering: pixelated;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.arcade-mode .runner-container {
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-origin: top center;
+    transition: transform 250ms cubic-bezier(0.4, 0.0, 1, 1) .4s;
+    z-index: 2;
+}

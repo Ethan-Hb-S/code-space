@@ -256,18 +256,18 @@ $( document ).ready(function() {
   function transitionLabels() {
 
     $('.work-request--information input').focusout(function(){
+            
+        var textVal = $(this).val();
 
-      var textVal = $(this).val();
+        if (textVal === "") {
+            $(this).removeClass('has-value');
+        }
+        else {
+            $(this).addClass('has-value');
+        }
 
-      if (textVal === "") {
-        $(this).removeClass('has-value');
-      }
-      else {
-        $(this).addClass('has-value');
-      }
-
-      // correct mobile device window position
-      window.scrollTo(0, 0);
+        // correct mobile device window position
+        window.scrollTo(0, 0);
 
     });
 
