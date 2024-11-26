@@ -38,6 +38,6 @@ This repo showcases my skills in OO programming, algorithms & data stuctures, py
 Feel free to reach out via phonecall or email for inquiries or further discussion.  
 Thank you for reviewing my repo! 😊  
 
-- **Email**: [vulomkiin@gmail.com](URL)
+- **Email**: [ethan.sun.hb@gmail.com](URL)
 
 <br><br>
