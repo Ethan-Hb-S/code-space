@@ -1,6 +1,6 @@
 # Student Learning Management System
 ## Introduction
-This is a full-stack cloud-based learning management system integrated complex functions, which enables users to create and manage their educations materials online including but not limited to courses, lecture streaming, forums and quizzes etc., or furtherly their personal accounts' content like avatars. It was developed on my last term in UNSW before my graduation.<br>
+This is a full-stack cloud-based learning management system integrated complex functions, which enables users to create and manage their educations materials online including but not limited to courses, lecture streaming, forums and quizzes etc., or furtherly their personal accounts' content like avatars.<br>
 The details are as follows, as indicated in index.<br>
 
 ## Index
