@@ -19,17 +19,17 @@ This repo showcases my skills in OO programming, algorithms & data stuctures, Py
 
 ## 📂 Directory
 ### ✍ Problem Solutions
-Shows the copy of my solutions to leetcode/hackerrank/codelity problems.  
-<br>
+Copies of my solutions to leetcode/hackerrank/codelity problems.  
+<br><br>
 
 ### 🛠 Projects
-Shows part of projects I developed.  
+Part of projects I developed.  
 <br>
 **Project - [Full-Stack Student Learning Management System]**  
 &nbsp;&nbsp;    - **Description**: A highly available and scalable Learning Management System based on cloud, integrating complex and advanced features to streamline user interaction and data management  
 &nbsp;&nbsp;    - **Technologies Used**: Python, Javascript, React, Flask, PostgreSQL, RDS, SQS  
 etc.
-<br>
+<br><br>
 <!--
 2. **Project 2 - [Your Project Name]**
     - **Description**:
@@ -40,7 +40,8 @@ etc.
 -->
 
 ### 📃 Algorithm Patterns
-
+Saved patterns of varies algorithms and data structures.  
+<br><br>
 
 ## 📞 Contact Me
 Feel free to reach out via phonecall or email for inquiries or further discussion.  
